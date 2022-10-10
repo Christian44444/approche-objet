@@ -20,6 +20,36 @@ public class Personne {
 		this.prenom = prenom;
 		this.adrPersonne = adrPersonne;
 	}
+	// les gets et Sets
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	// met et affiche nom et prénom Nom en majuscule 
+	public void affichNomPrenom() {
+		System.out.println(nom.toUpperCase() + " " + prenom);
+	}
+	
+	
+	public void setAdrPersonne(AdressePostale adrPersonne) {
+		this.adrPersonne = adrPersonne;
+	}
+
+	public 	void changeAdresse(int numero, String libelleR, int codeP, String villeA) {
+		AdressePostale p2 = new AdressePostale(numero, libelleR, codeP, villeA);
+		this.adrPersonne = p2;
+	}
 	
 	
 	

@@ -16,7 +16,7 @@ public class TestPersonne {
 		
 //		plus lisible
 		AdressePostale p2 = new AdressePostale(28, "rue des eucalyptus", 44300, "Nantes");
-		Personne pers2 = new Personne("MICHAUD","Emmanuelle",p2);
+		Personne pers2 = new Personne("Michaud","Emmanuelle",p2);
 		
 //		pers2.nom = "MICHAUD";
 //		pers2.prenom = "Emmanuelle";
@@ -27,7 +27,17 @@ public class TestPersonne {
 //		Personne pers3 = new Personne("MICHAUD","Emmanuelle");
 		System.out.println(pers1.prenom + " TP");
 		System.out.println(pers2.prenom + " TP");
-//		System.out.println(pers3.adrPersonne); ne pas aller plus loin car les propriétés ne sont pas définies   
+//		System.out.println(pers3.adrPersonne); ne pas aller plus loin car les propriétés ne sont pas définies
+		
+//		Affichage Nom et prénom avec Nom en majuscule
+		pers2.affichNomPrenom();
+		
+// 		première méthode pour modifer l'adresse
+		AdressePostale p3 = new AdressePostale(12, "rue des quai", 44000, "Nantes");
+		pers2.setAdrPersonne(p3);
+//   	Autre méthode pour modifier l'adresse		
+		pers2.changeAdresse(10, "rue émile Zola", 44000, "Nantes");
+		
 	}
 
 }
