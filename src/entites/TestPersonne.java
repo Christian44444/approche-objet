@@ -13,8 +13,9 @@ public class TestPersonne {
 //		pers1.adrPersonne.libelleRue ="rue des eucalyptus";
 //		pers1.adrPersonne.codePostal = 44300;
 //		pers1.adrPersonne.ville = "Nantes";
+		AdressePostale p2 = new AdressePostale(28, "rue des eucalyptus", 44300, "Nantes");
+		Personne pers2 = new Personne("MICHAUD","Emmanuelle",p2);
 		
-		Personne pers2 = new Personne("MICHAUD","Emmanuelle",new AdressePostale(28, "rue des eucalyptus", 44300, "Nantes"));
 //		pers2.nom = "MICHAUD";
 //		pers2.prenom = "Emmanuelle";
 //		pers2.adrPersonne.numeroRue = 28;
