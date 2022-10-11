@@ -10,11 +10,19 @@ public class Compte {
 		this.numeroCpt = numeroCpt;
 		this.soldeCpt = soldeCpt;
 	}
+	
+	// Redéfinition de la classe toString
+	@Override
+	public String toString() {
+		return "Compte [numeroCpt=" + numeroCpt + ", soldeCpt=" + soldeCpt + "]";
+	}
+	
 	// getters et setters 
 
 	public String getNumeroCpt() {
 		return numeroCpt;
 	}
+
 
 	public void setNumeroCpt(String numeroCpt) {
 		this.numeroCpt = numeroCpt;
