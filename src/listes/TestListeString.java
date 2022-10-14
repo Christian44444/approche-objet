@@ -3,7 +3,6 @@ package listes;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.lang.model.element.NestingKind;
 
 public class TestListeString {
 

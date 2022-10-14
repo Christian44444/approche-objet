@@ -24,14 +24,14 @@ public class Personnage {
 			s1 = scanner.nextLine();
 			try { 
 				choix = Integer.parseInt(s1);
-				if (choix > 0 && choix < 3) {
+				if (choix > 0 && choix < 4) {
 					ok = c1.combattre(choix);
 					// si on est toujours vivant
 					if (ok) {
 						// contrôler qu'on a gagné si oui sortir
 						ok = false;
 						for (Adversaire adversaire : c1.ennemis) {
-							if (adversaire.getPtsVie() > 0) {
+							if (adversaire == null ||adversaire.getPtsVie() > 0) {
 								ok = true;
 								break;
 							}
@@ -70,10 +70,10 @@ public class Personnage {
 	private static void initPersonnage() {
 		int a = 12;
 		int b = 18;
-		setForce((int)Math.random() * (a - b));
+		setForce((int)Math.random() * (b - a) + b);
 		a = 20;
 		b = 50;
-		setPtsVie((int)Math.random() * (a - b));
+		setPtsVie((int)Math.random() * (b - a) + b);
 		setScore(0);
 	}
 

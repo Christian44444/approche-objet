@@ -29,7 +29,7 @@ public class Adversaire {
 			break;
 		}
 		int[] fourchette = {a,b};
-		return (int)Math.random() * (fourchette[1] + 1 - fourchette[0]) + fourchette[0];
+		return (int)Math.random() * (fourchette[1] - fourchette[0]) + fourchette[0];
 	}
 	public int valeurPtsVie(int type) {
 		int a = 0;
@@ -49,7 +49,7 @@ public class Adversaire {
 			break;
 		}
 		int[] fourchette = {a,b};
-		return (int)Math.random() * (fourchette[1] + 1 - fourchette[0]) + fourchette[0];
+		return (int)Math.random() * (fourchette[1] - fourchette[0]) + fourchette[0];
 	}
 
 	public int getForce() {
