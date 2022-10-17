@@ -1,7 +1,7 @@
 package listes;
 
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
 	private String nom;
 	private Integer nbHab;
 	
@@ -11,6 +11,19 @@ public class Ville {
 		this.nbHab = nbHab;
 	}
 	
+	@Override
+	public int compareTo(Ville o) {
+		// TODO Auto-generated method stub
+// tri sur le nom		return this.getNom().compareTo(o.getNom());
+		// tri sur le nombre d'habitants
+		if (this.getNbHab() > o.getNbHab()) {
+			return 1;
+		} else if (this.getNbHab() < o.getNbHab()) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
 	
 	
 	@Override
@@ -35,6 +48,9 @@ public class Ville {
 	public void setNbHab(Integer nbHab) {
 		this.nbHab = nbHab;
 	}
+
+
+
 	
 	
 	
