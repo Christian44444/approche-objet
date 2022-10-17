@@ -26,8 +26,8 @@ public class TestTriVille {
 		// Collections.sort(listeVilles); java.lang.Comparable voir implements de la classe Ville
 		
 		// java.util.Comparator voir Class ComparatorHabitant
-		Collections.sort(listeVilles, new ComparatorHabitant());
-		Collections.sort(listeVilles, new ComparatorVille());
+		Collections.sort(listeVilles, new ComparatorHabitant()); // tri sur le nombre d'habitants
+		Collections.sort(listeVilles, new ComparatorVille()); // tri sur le nom
 		for (Ville ville : listeVilles) {
 			System.out.println(ville);
 			
