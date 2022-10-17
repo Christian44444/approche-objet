@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
+
 public class ComptagePaysParContinent {
 
 	public static void main(String[] args) {
@@ -20,25 +21,34 @@ public class ComptagePaysParContinent {
 		
 		HashMap<String, Integer> maMap = new HashMap<>(); // contient en clé le continent et en valeur Le comptage des pays
 		
+//		for (Pays pays : mesPays) {
+//			if (pays.getContinent().equals("Europe")) {
+//				if (maMap.get("Europe") != null) {
+//					maMap.put("Europe", maMap.get("Europe") + 1);
+//				} else {
+//					maMap.put("Europe", 1);
+//				} 
+//			} else if (pays.getContinent().equals("Asie")) {
+//					if (maMap.get("Asie") != null) {
+//						maMap.put("Asie", maMap.get("Asie") + 1);
+//					} else {
+//						maMap.put("Asie", 1);
+//					}	
+//			} else {
+//					if (maMap.get("Océanie") != null) {
+//						maMap.put("Océanie", maMap.get("Océanie") + 1);
+//					} else {
+//						maMap.put("Océanie", 1);
+//					}
+//			}
+//		}
+		
+		// Et plus simplement
 		for (Pays pays : mesPays) {
-			if (pays.getContinent() == "Europe") {
-				if (maMap.get("Europe") != null) {
-					maMap.put("Europe", maMap.get("Europe") + 1);
-				} else {
-					maMap.put("Europe", 1);
-				} 
-			} else if (pays.getContinent() == "Asie") {
-					if (maMap.get("Asie") != null) {
-						maMap.put("Asie", maMap.get("Asie") + 1);
-					} else {
-						maMap.put("Asie", 1);
-					}	
+			if (maMap.get(pays.getContinent()) != null) {
+				maMap.put(pays.getContinent(), maMap.get(pays.getContinent()) + 1);
 			} else {
-					if (maMap.get("Océanie") != null) {
-						maMap.put("Océanie", maMap.get("Océanie") + 1);
-					} else {
-						maMap.put("Océanie", 1);
-					}
+				maMap.put(pays.getContinent(), 1);
 			}
 		}
 		

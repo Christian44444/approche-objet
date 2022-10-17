@@ -1,6 +1,8 @@
 package sets;
 
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class TestSetDouble {
 
@@ -27,6 +29,24 @@ public class TestSetDouble {
 		}
 		System.out.println("Max " + max);
 		// reste le remove
+		boolean first = true;
+		Double min = 0.0; 
+		Iterator<Double> it = set.iterator();
+		while (it.hasNext()) {
+			if (first) {
+				min = it.next();
+			} else {
+				if (min > it.next()) {
+					min = it.next();
+				}
+			}
+		}
+		set.remove(min);
+		
+		for (Double double1 : set) {
+			System.out.println(double1);
+		}
+		
 		
 		
 	}

@@ -30,6 +30,8 @@ public class MapVilles {
 		mapVilles.put(v7.getNom(), v7);
 		mapVilles.put(v8.getNom(), v8);
 		
+		// ou bien for (Ville v: mapVilles) { mapVilles.put(v.getNom(), v); }
+		
 		Collection<Ville> lesVille = mapVilles.values(); 
 		Iterator<Ville> it = lesVille.iterator();
 		
