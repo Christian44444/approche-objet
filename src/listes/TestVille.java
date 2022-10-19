@@ -36,6 +36,23 @@ public class TestVille {
 			listeVilles.set(i, listeVilles.get(i).getNbHab() > 100000 ? new Ville(listeVilles.get(i).getNom().toUpperCase(), listeVilles.get(i).getNbHab()) : listeVilles.get(i));
 		}
 		System.out.println(listeVilles);
+		
+		// Test equals() en @Override
+		Ville ve1 = new Ville("La Baule", 44500);
+		Ville ve2 = new Ville("La Baule", 44500);
+		
+		System.out.println(ve1.equals(ve2)); // Return true
+		 
+		Ville ve3 = new Ville("La Baules", 44500);
+		Ville ve4 = new Ville("La Baule", 44500);
+		System.out.println(ve3.equals(ve4)); // Return false
+		
+		System.out.println(ve1 == ve2);
+		System.out.println(ve3 == ve4);
+		// Comment faire pour que == retourne true
+		ve1 = ve2;
+		System.out.println(ve1 == ve2);
+		
 	}
 
 }

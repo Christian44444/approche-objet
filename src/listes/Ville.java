@@ -1,5 +1,6 @@
 package listes;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.IconifyAction;
 
 public class Ville implements Comparable<Ville>{
 	private String nom;
@@ -9,6 +10,20 @@ public class Ville implements Comparable<Ville>{
 		super();
 		this.nom = nom;
 		this.nbHab = nbHab;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		 
+		if (obj == null || !(obj instanceof Ville) ) {
+			return false;	
+		}
+		// Là on a une ville et elle est valide
+		// On doit caster obj pour accéder à ses propriétés
+		Ville autre = (Ville)obj;
+		
+		return autre.getNom().equals(this.getNom()) && (autre.getNbHab().equals(this.getNbHab()));
+		
+		// Le test d'égalité est fait dans la classe TestVille()
 	}
 	
 	@Override
