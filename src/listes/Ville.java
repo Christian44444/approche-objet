@@ -23,7 +23,7 @@ public class Ville implements Comparable<Ville>{
 		
 		return autre.getNom().equals(this.getNom()) && (autre.getNbHab().equals(this.getNbHab()));
 		
-		// Le test d'égalité est fait dans la classe TestVille()
+		// Le test d'égalité est fait dans la classe TestEquals()
 	}
 	
 	@Override
