@@ -8,8 +8,8 @@ public enum Saison {
 	ETE("Eté",2),
 	/** Objet AUTOMNE */
 	AUTOMNE("Automne",3),
-	/** Objet HIVERS */
-	HIVERS("Hivers",4);
+	/** Objet HIVER */
+	HIVER("Hiver",4);
 
 	/** Nom : valeur de la constante */
 	private String nom;

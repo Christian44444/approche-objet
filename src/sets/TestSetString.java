@@ -1,6 +1,7 @@
 package sets;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class TestSetString {
 
@@ -25,6 +26,16 @@ public class TestSetString {
 			}
 		}
 		System.out.println(paysPlusGrand);
+		
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			if (it.next().equals(paysPlusGrand)) {
+				it.remove();
+			}
+		}
+		for (String string : set) {
+			System.out.println(string);
+		}
 
 	}
 

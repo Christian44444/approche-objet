@@ -21,7 +21,7 @@ public class TestEnumeration {
 		System.out.println(Saison.valueOf("ETE").getNom());
 		
 		// Utilisattion d'une méthode créée dans m'énumération pour récupérer l'objet dont le libellé est passé en paramètre
-		System.out.println( Saison.recupSaison("Hivers"));
-		System.out.println(Saison.HIVERS.equals(Saison.recupSaison("Hivers")));
+		System.out.println( Saison.recupSaison("Hiver"));
+		System.out.println(Saison.HIVER.equals(Saison.recupSaison("Hiver")));
 	}
 }
