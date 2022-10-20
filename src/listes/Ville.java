@@ -1,10 +1,15 @@
 package listes;
+
+import fr.diginamic.testenumeration.Continent;
+
 /**
  * Représente le concept de Ville avec un nom et un nombre d'habitant.
  * @author cmich
  *
  */
 public class Ville implements Comparable<Ville>{
+	/** Continent de la ville cf Package Continent ci-dessus */
+	private Continent continent;
 	/** Nom de la ville	 */
 	private String nom;
 	/** Nombre d'habitants	 */
@@ -15,8 +20,9 @@ public class Ville implements Comparable<Ville>{
 	 * @param nom nom de la ville
 	 * @param nbHab nombre d'habitants
 	 */
-	public Ville(String nom, Integer nbHab) {
+	public Ville(Continent continent, String nom, Integer nbHab) {
 		super();
+		this.continent = continent;
 		this.nom = nom;
 		this.nbHab = nbHab;
 	}
@@ -30,7 +36,7 @@ public class Ville implements Comparable<Ville>{
 		// On doit caster obj pour accéder à ses propriétés
 		Ville autre = (Ville)obj;
 		// Attention ne gère pas les attributs null de l'objet qui porte le .<méthode()> 
-		return autre.getNom().equals(this.getNom()) && (autre.getNbHab().equals(this.getNbHab()));
+		return autre.getContinent().equals(this.getContinent()) && autre.getNom().equals(this.getNom()) && (autre.getNbHab().equals(this.getNbHab()));
 		
 		// Le test d'égalité est fait dans la classe TestVille()
 	}
@@ -52,10 +58,16 @@ public class Ville implements Comparable<Ville>{
 	
 	@Override
 	public String toString() {
-		return "Ville [nom=" + nom + ", nbHab=" + nbHab + "]";
+		return "Ville [nom=" + nom + ", nbHab=" + nbHab + " continent=" + continent.getNom() + "]";
 	}
 
 
+	/**
+	 * @return continent
+	 */
+	public Continent getContinent() {
+		return continent;
+	}
 
 	/**
 	 * @return nom
@@ -71,6 +83,14 @@ public class Ville implements Comparable<Ville>{
 		this.nom = nom;
 	}
 
+	
+	/**
+	 * @param continent le continent to set
+	 */
+	public void setContinent(Continent continent) {
+		this.continent = continent;
+	}
+	
 	/**
 	 * @return nombre d'habitants
 	 */
